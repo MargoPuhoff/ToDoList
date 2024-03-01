@@ -2,10 +2,18 @@
   <div class="task">
 
     <div>
-      <input
-        type="checkbox"
-        v-model="task.completed">
-      <span> {{ task.title}} </span>
+      <a-checkbox 
+        class="checkbox"
+        v-model:checked="task.completed">
+        
+        <a-typography-text delete v-if="task.completed == true"> 
+          {{ task.title}}
+        </a-typography-text>
+        
+        <a-typography-text v-else> 
+          {{ task.title}}
+        </a-typography-text>
+      </a-checkbox>
     </div>
 
     <div>
@@ -22,7 +30,16 @@
 </template>
 
 <script>
+import {Checkbox} from "ant-design-vue";
+import {TypographyText} from "ant-design-vue"
+  
+  
 export default{
+
+  components: {
+    ACheckbox: Checkbox,
+    ATypographyText: TypographyText
+  },
   
   props: {
     task: {
@@ -36,23 +53,17 @@ export default{
 <style scoped> 
   .task{
     margin: 0.5rem;
-    padding: 0.75rem;
+    padding: 0.5rem;
     font-size: 1.12rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     font-weight: none;
     border-radius: 15px;
     background: rgba(245, 229, 212, 0.8);
-  }  
+  } 
   
-  span{
-    padding-left: 0.3rem;
-  }
-
-  input:checked +span{
+  .checkbox:checked{
     color: #a73328;
-    text-decoration: line-through;
-  }
-  
-  
+  }  
 </style>

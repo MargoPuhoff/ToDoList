@@ -1,14 +1,20 @@
 <template>
-  <input
+  <a-input
     :value="modelValue"
     @input="updateInput"
-    class="input">
+    class="input"/>
 </template>
 
 <script>
+import { Input } from 'ant-design-vue';
+  
 export default{
   
   name: "my-input",
+
+  components: {
+    AInput: Input
+  },
   
   props: {
     modelValue: [String, Number]  

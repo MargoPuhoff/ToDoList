@@ -2,7 +2,6 @@
   <form @submit.prevent>
     <my-input
       v-model="task.title" 
-      type="text" 
       placeholder="Создать задачу"/>
     <my-button
       class="add"
