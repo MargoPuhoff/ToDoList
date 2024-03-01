@@ -1,21 +1,24 @@
 <template>
-  <a-space wrap>
     <a-button>
       <slot></slot>
     </a-button>
-  </a-space>
 </template>
 
 <script>
+import { Button } from 'ant-design-vue';
+  
 export default{
-   name: "my-button"
+   name: "my-button",
+  
+   components: {
+     AButton: Button,
+   }
  } 
 </script>
 
 <style scoped>
   .add{
-    width: 30%;
-    padding: 0.5rem;
+    width: 10%;
     cursor: pointer;
     border: none;
     border-radius: 15px;
@@ -27,5 +30,9 @@ export default{
     cursor: pointer;
     border: none;
     background: transparent;
+  }
+
+  .add:hover, .remove:hover{
+    color: #a73328;;
   }
 </style>

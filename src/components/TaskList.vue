@@ -6,7 +6,7 @@
       :key="task.id"
       @remove="$emit('remove', task)"/>
   </div>
-  <h2 v-else>Дел нет. Можно отдыхать!</h2>
+  <my-title v-else>Дел нет. Можно отдыхать!</my-title>
 </template>
 
 <script>

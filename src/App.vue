@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     
-    <h2>Список дел</h2>
+    <my-title>Список дел</my-title>
     <task-form
       @add="addTask"/>
     <task-list
@@ -69,10 +69,6 @@ export default{
   
   .app{
     padding: 1.25rem;
-  }
-
-  h2{
-    color: #a73328;
   }
 
 </style>
