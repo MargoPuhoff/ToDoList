@@ -5,6 +5,7 @@
       type="text" 
       placeholder="Создать задачу"/>
     <my-button
+      class="add"
       @click="addTask">
       Добавить
     </my-button>

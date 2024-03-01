@@ -8,8 +8,9 @@
       <span> {{ task.title}} </span>
     </div>
 
-    <div class="task_btn">
+    <div>
       <my-button
+        class="remove"
         @click="$emit('remove', task)">
         <span
           class="material-symbols-outlined">close
@@ -48,16 +49,10 @@ export default{
     padding-left: 0.3rem;
   }
 
-  input:checked +span, .compl{
+  input:checked +span{
     color: #a73328;
     text-decoration: line-through;
   }
   
-  .task_btn button{
-    width: 0%;
-    padding: 0rem;
-    cursor: pointer;
-    border: none;
-    background: rgba(245, 229, 212, 0.5);
-  }
+  
 </style>
