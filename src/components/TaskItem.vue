@@ -62,8 +62,4 @@ export default{
     border-radius: 15px;
     background: rgba(245, 229, 212, 0.8);
   } 
-  
-  .checkbox:checked{
-    color: #a73328;
-  }  
 </style>
