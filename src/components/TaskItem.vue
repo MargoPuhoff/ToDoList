@@ -3,7 +3,6 @@
 
     <div>
       <a-checkbox 
-        class="checkbox"
         v-model:checked="task.completed">
         
         <a-typography-text delete v-if="task.completed == true"> 
@@ -13,6 +12,7 @@
         <a-typography-text v-else> 
           {{ task.title}}
         </a-typography-text>
+        
       </a-checkbox>
     </div>
 
